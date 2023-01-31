@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditAvatarComponent } from './edit-avatar/edit-avatar.component';
 import { ErrorComponent } from './error/error.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ErrorComponent } from './error/error.component';
     NavbarComponent,
     ProfileComponent,
     EditAvatarComponent,
-    ErrorComponent
+    ErrorComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
