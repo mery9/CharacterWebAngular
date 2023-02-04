@@ -1,0 +1,31 @@
+<div class = "container">
+    <img [src]="avatarpart.imageUrl" [alt]="avatarpart.name"/>
+
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{avatarpart.name}}
+            </span>
+            <span class="favorite {{avatarpart.favorite? '': 'not'}}">
+                ♥
+            </span>
+        </div>
+        <div class="origins">
+            <span *ngFor="let origin of avatarpart.origin">
+                {{origin}}
+            </span>
+        </div>
+        <div class="tags">
+            <a *ngFor="let tag of avatarpart.tags" routerLink="/tag/{{tag}}">
+                {{tag}}
+            </a>
+        </div>
+        <div class="price">
+            <span>
+                {{avatarpart.price | currency}}
+            </span>
+        </div>
+
+        <button>Add To Cart</button>
+    </div>
+</div>
