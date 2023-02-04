@@ -1,20 +1,19 @@
-<nav class="navbar bg-dark">
-    <div class="container text-center collapse navbar-collapse" id="navMain">
-      <div class="row">
-        <div class="col-6">
-          <ul class="navbar-nav me-auto mb-2">
-            <li class="nav-item">
-              <a class="nav-link text-light" href="/">Homepage</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-6">
-          <ul class="navbar-nav me-auto mb-2">
-            <li class="nav-item">
-              <a class="nav-link text-light" href="/profile">Profile</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+<header>
+    <div class = "container">
+        <a routerLink="/" class="logo">Character Project!</a>
+        <nav>
+            <ul>
+                <li>
+                    <a routerLink="/login">Login</a>
+                </li>
+                <li class="menu-container">
+                    <a routerLink="/dashboard">Arana</a>
+                    <div class="menu">
+                        <a routerLink="/profile">Profile</a>
+                        <a>Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </div>
-  </nav>
+</header>
