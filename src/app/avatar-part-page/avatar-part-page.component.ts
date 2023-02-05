@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { AvatarpartService } from '../services/avatarpart.service';
+import { CartService } from '../services/cart.service';
 import { AvatarPart } from '../shared/models/AvatarPart';
 
 @Component({
@@ -10,11 +11,15 @@ import { AvatarPart } from '../shared/models/AvatarPart';
 })
 export class AvatarPartPageComponent {
     avatarpart!: AvatarPart;
-    constructor(activatedRoute:ActivatedRoute, avatarpartService:AvatarpartService) {
+    constructor(activatedRoute:ActivatedRoute, avatarpartService:AvatarpartService, private cartService:CartService, private router: Router) {
         activatedRoute.params.subscribe((params) => {
             if(params.id)
             this.avatarpart = avatarpartService.getAvatarPartById(params.id);
         })
     }
 
+    addToCart() {
+        this.cartService.addToCart(this.avatarpart);
+        this.router.navigateByUrl('/cart-page');
+    }
 }
