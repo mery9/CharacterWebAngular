@@ -12,6 +12,7 @@ import { SearchComponent } from './search/search.component';
 import { TagsComponent } from './tags/tags.component';
 import { AvatarPartPageComponent } from './avatar-part-page/avatar-part-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CartPageComponent } from './cart-page/cart-page.component';
     SearchComponent,
     TagsComponent,
     AvatarPartPageComponent,
-    CartPageComponent
+    CartPageComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,

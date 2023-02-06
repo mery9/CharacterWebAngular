@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+
+    cartQuantity = 0;
+    constructor(cartService:CartService) { 
+        cartService.getCartObservable().subscribe((newCart) => {
+            this.cartQuantity = newCart.totalCount;
+        })
+    }
 
 }
