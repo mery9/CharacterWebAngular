@@ -14,7 +14,9 @@ export class AvatarPartPageComponent {
     constructor(activatedRoute:ActivatedRoute, avatarpartService:AvatarpartService, private cartService:CartService, private router: Router) {
         activatedRoute.params.subscribe((params) => {
             if(params.id)
-            this.avatarpart = avatarpartService.getAvatarPartById(params.id);
+            avatarpartService.getAvatarPartById(params.id).subscribe(serverAvatarpart => {
+                this.avatarpart = serverAvatarpart;
+            });
         })
     }
 
