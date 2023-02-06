@@ -1,4 +1,9 @@
-<div class = "container">
+<app-not-found
+[visible]="!avatarpart.id"
+notFoundMessage="Avatar Part Not Found!"
+resetLinkText="Back To Homepage">
+</app-not-found>
+<div *ngIf="avatarpart.id" class="container">
     <img [src]="avatarpart.imageUrl" [alt]="avatarpart.name"/>
 
     <div class="details">

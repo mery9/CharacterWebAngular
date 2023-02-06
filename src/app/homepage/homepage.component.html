@@ -1,5 +1,9 @@
 <app-search></app-search>
 <app-tags></app-tags>
+<app-not-found
+[visible]="!avatarparts || !avatarparts.length"
+resetLinkText="Reset Search">
+</app-not-found>
 <ul>
     <li *ngFor="let avatar of avatarparts">
         <a routerLink="/avatarparts/{{avatar.id}}">

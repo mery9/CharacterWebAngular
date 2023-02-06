@@ -13,6 +13,7 @@ import { TagsComponent } from './tags/tags.component';
 import { AvatarPartPageComponent } from './avatar-part-page/avatar-part-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { TitleComponent } from './title/title.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TitleComponent } from './title/title.component';
     TagsComponent,
     AvatarPartPageComponent,
     CartPageComponent,
-    TitleComponent
+    TitleComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

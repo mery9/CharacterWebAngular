@@ -9,7 +9,7 @@
 ul {
     display: flex;
     flex-direction: column;
-    flex: 3 0;
+    flex:3 0;
     justify-content: space-evenly;
     border: 1px solid rgb(64, 57, 57);
     border-radius: 1rem;
