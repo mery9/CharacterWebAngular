@@ -14,6 +14,8 @@ import { AvatarPartPageComponent } from './avatar-part-page/avatar-part-page.com
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { TitleComponent } from './title/title.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,12 +30,14 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AvatarPartPageComponent,
     CartPageComponent,
     TitleComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

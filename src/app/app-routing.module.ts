@@ -6,6 +6,7 @@ import { CartPageComponent } from './cart-page/cart-page.component';
 import { EditAvatarComponent } from './edit-avatar/edit-avatar.component';
 import { ErrorComponent } from './error/error.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
     { path: 'avatarparts/:id', component: AvatarPartPageComponent},
     { path: 'cart-page', component: CartPageComponent },
     { path: 'tag/:tag', component: HomepageComponent },
+    { path: 'login', component: LoginPageComponent },
     { path: '**', pathMatch: 'full', component: ErrorComponent },
 
 ];
