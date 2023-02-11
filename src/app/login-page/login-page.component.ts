@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-login-page',
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginPageComponent {
     loginForm!: FormGroup
     isSumitted = false;
-    constructor(private formBuilder:FormBuilder) { }
+    constructor(private formBuilder:FormBuilder, private userService:UserService) { }
 
     ngOnInit(): void {
         this.loginForm = this.formBuilder.group({
@@ -27,5 +28,6 @@ export class LoginPageComponent {
         if(this.loginForm.invalid) return;
         alert(`email: ${this.fc.email.value}, 
             password: ${this.fc.password.value}`)
+
     }
 }
