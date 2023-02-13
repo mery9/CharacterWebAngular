@@ -21,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputContainerComponent } from './input-container/input-container.component';
 import { InputValidationComponent } from './input-validation/input-validation.component';
 import { TextInputComponent } from './text-input/text-input.component';
-import { DefaultButtonComponent } from './default-button/default-button.component'
+import { DefaultButtonComponent } from './default-button/default-button.component';
+import { RegisterPageComponent } from './register-page/register-page.component'
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { DefaultButtonComponent } from './default-button/default-button.componen
     InputValidationComponent,
     TextInputComponent,
     DefaultButtonComponent,
+    RegisterPageComponent,
   ],
   imports: [
     BrowserModule,

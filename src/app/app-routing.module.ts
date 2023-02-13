@@ -8,6 +8,7 @@ import { ErrorComponent } from './error/error.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RegisterPageComponent } from './register-page/register-page.component';
 
 const routes: Routes = [
     { path: '', component: HomepageComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
     { path: 'cart-page', component: CartPageComponent },
     { path: 'tag/:tag', component: HomepageComponent },
     { path: 'login', component: LoginPageComponent },
+    { path: 'register', component: RegisterPageComponent },
     { path: '**', pathMatch: 'full', component: ErrorComponent },
 
 ];
