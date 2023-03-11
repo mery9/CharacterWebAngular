@@ -1,1 +1,16 @@
-<p>edit-description-page works!</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Description</title>
+</head>
+<body>
+    <h1>Change Description</h1>
+    <form>
+        <label for="description">New Description:</label>
+        <input type="text" id="description" name="description" onkeydown="return event.key != 'Enter';"><br><br>
+        <a routerLink="/profile">
+        <button type="submit">Submit Change</button>
+        </a>
+    </form>
+</body>
+</html>

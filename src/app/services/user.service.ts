@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
-import { USER_LOGIN_URL, USER_REGISTER_URL } from '../shared/constants/urls';
+import { USER_EDIT_DESCRIPTION_URL, USER_LOGIN_URL, USER_REGISTER_URL } from '../shared/constants/urls';
 import { IUserLogin } from '../shared/interfaces/IUserLogin';
 import { IUserRegister } from '../shared/interfaces/IUserRegister';
 import { User } from '../shared/models/User';
@@ -68,11 +68,33 @@ export class UserService {
         localStorage.setItem(USER_KEY, JSON.stringify(user));
     }
 
-    private getUserFromLocalStorage():User {
+    public getUserFromLocalStorage():User {
         const userJson = localStorage.getItem(USER_KEY);
         if(userJson) return JSON.parse(userJson) as User; //If don't has user it will send new user info
         return new User();
     }
+
+    public getUser(): User {
+        return this.getUserFromLocalStorage();
+    }
+
+    updateDescription(description: string): Observable<User> {
+        const url = `${USER_EDIT_DESCRIPTION_URL}/editdescription`;
+        return this.http.put<User>(url, { description }).pipe(
+          tap({
+            next: (user) => {
+              this.setUserToLocalStorage(user);
+              this.userSubject.next(user);
+              this.toastrService.success('Description updated successfully');
+            },
+            error: (errorResponse) => {
+              this.toastrService.error(errorResponse.error, 'Failed to update description');
+            }
+          })
+        );
+      }
+      
+
 }
 
 
