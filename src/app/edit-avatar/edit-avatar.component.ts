@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./edit-avatar.component.css']
 })
 export class EditAvatarComponent {
-
+    
 }
