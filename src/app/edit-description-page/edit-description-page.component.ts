@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-edit-description-page',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./edit-description-page.component.css']
 })
 export class EditDescriptionPageComponent {
+    user = this.userService.getUserFromLocalStorage();
+    description = this.user.description;
 
+    constructor(private userService: UserService) {}
+    
+
+    updateDescription() {
+    this.userService.updateDescription(this.description).subscribe();
+  }
 }
+
+
+
