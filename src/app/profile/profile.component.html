@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <div class="avatar-box text-center">
+          <img src="./assets/img/User.png" alt="avatar" class="avatar">
+        </div>
+      </div>
+      <div class="col-md-8">
+        <h2 class="text-primary">Name: {{user.name}}</h2>
+        <p class="text-secondary">User Bio: {{user.description}}</p>
+        <div class="row mt-4">
+            <div class="col-6">
+                <a class="nav-link text-light" href="/editdescription">
+                <button type="button" class="btn btn-primary" >Edit your description</button>
+                </a>
+            </div>
+            <div class="col-6">
+                <a class="nav-link text-light" href="/editavatar">
+                <button type="button" class="btn btn-primary">Edit your Avatar</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
