@@ -33,7 +33,7 @@ This project is base on this Angular Tutorial : https://www.youtube.com/playlist
 
 ## How to start This program?
 
-1.clone this project into your computer (git clone https://github.com/mery9/CharacterWebAngular.git)
+1.clone this project into your computer "git clone https://github.com/mery9/CharacterWebAngular.git"
 
 2.go to this git directory with command prompt (cmd) (.../CharacterWebAngular)
 
