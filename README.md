@@ -31,7 +31,7 @@ information link : https://hevodata.com/learn/angular-mongodb/
 
 This project is base on this Angular Tutorial : https://www.youtube.com/playlist?list=PLpaspowtqj-dA0cRZ1yEZBv0iwdOru-SC
 
-## How to start This program?
+## How to start this program?
 
 1.clone this project into your computer "git clone https://github.com/mery9/CharacterWebAngular.git"
 
