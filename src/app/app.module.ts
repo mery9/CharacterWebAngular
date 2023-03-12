@@ -23,8 +23,8 @@ import { InputValidationComponent } from './input-validation/input-validation.co
 import { TextInputComponent } from './text-input/text-input.component';
 import { DefaultButtonComponent } from './default-button/default-button.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
-import { EditDescriptionPageComponent } from './edit-description-page/edit-description-page.component'
-//import { CustomAvatarGeneratorModule } from 'custom-avatar-generator';
+import { EditDescriptionPageComponent } from './edit-description-page/edit-description-page.component';
+import { AvatarGeneratorModule } from 'ng-custom-avatar-generator';
 
 @NgModule({
   declarations: [
@@ -54,6 +54,7 @@ import { EditDescriptionPageComponent } from './edit-description-page/edit-descr
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AvatarGeneratorModule,
     ToastrModule.forRoot({
         timeOut:6000,
         newestOnTop:false

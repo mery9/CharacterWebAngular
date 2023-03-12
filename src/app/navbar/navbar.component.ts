@@ -22,6 +22,9 @@ export class NavbarComponent {
             this.user = newUser;
         })
     }
+    ngOnInit(): void {
+    }
+
     logout(){
         this.userService.logout();
     }

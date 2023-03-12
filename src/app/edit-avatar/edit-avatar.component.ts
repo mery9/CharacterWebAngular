@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AvatarGeneratorModule } from 'ng-custom-avatar-generator';
 
 @Component({
   selector: 'app-edit-avatar',
